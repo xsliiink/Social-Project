@@ -88,7 +88,7 @@ Copy code
 **Example UI:**
 | Home Page | Event Details |
 |------------|----------------|
-| ![Home Page](./screenshots/main.png) | ![Add Event](./screenshots/add_event.png) |
+| ![Home Page](./screenshots/2main.png) | ![Add Event](./screenshots/add_event_2.png) |
 
 ---
 
