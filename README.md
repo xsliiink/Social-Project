@@ -110,13 +110,14 @@ npm install
 cd client
 npm install
 npm run dev
-In the second terminal (Server):
+```
+**In the second terminal (Server):**
 
-Bash
+```bash
 
 cd server
 npm install
 npx tsx server.ts
-
+```
 
 
