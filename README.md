@@ -3,6 +3,14 @@
 **EventHub** is a full-stack web application for discovering, creating, and filtering events by hobbies and location.  
 Users can create their own events, attach images, select hobbies, and browse official events nearby.
 
+
+## ⚡️ Key Features & Refactoring Highlights
+
+1.  **Strict Typing:** Implemented comprehensive interfaces for Express `Request`/`Response` objects and Database models.
+2.  **Dynamic Filtering:** Advanced SQL query building for events with filters for location, hobbies, and official status.
+3.  **Relational Database Schema:** Optimized Many-to-Many relationships for linking users/events with hobbies.
+4.  **Security:** Secure password hashing and protected API routes using custom middleware.
+5.  **Clean Code:** Migrated to ES Modules (ESM) and centralized database logic in a typed `db.ts` module.
 ---
 
 ## ⚙️ Tech Stack
@@ -73,35 +81,35 @@ project/
 │ └── App.tsx
 └── package.json
 
-yaml
-Copy code
-
----
-
-## 🖼️ UI & UX
-
-- Clean and modern interface  
-- Event cards with images, location, date, and hobbies  
-- Smooth transitions and animations  
-- Mobile responsive design  
 
 **Example UI:**
 | Home Page | Event Details |
 |------------|----------------|
 | ![Home Page](./screenshots/3main.png) | ![Add Event](./screenshots/3add_event.png) |
 
----
+## 📦 Getting Started
 
-## 💾 How to Run Locally
+### 1. Clone the repository
+```bash
+git clone [https://github.com/xsliiink/Social-Project.git](https://github.com/xsliiink/Social-Project.git)
+cd Social-Project
+
+```
+
+### 2. Install dependencies
 
 ```bash
-# 1. Install dependencies
-cd backend && npm install
-cd ../frontend && npm install
+npm install
 
-# 2. Run backend and frontend
-cd backend && npm start
-cd ../frontend && npm run dev
-App will be available at:
-📍 Frontend → http://localhost:5173
-📍 Backend → http://localhost:5000
+```
+
+### 3. Run the server
+cd client
+npm run dev
+In the seprate cmd:
+cd server
+npx tsx server.ts
+
+
+
+
