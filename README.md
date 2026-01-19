@@ -1,3 +1,5 @@
+![CI Status](https://github.com/xsliiink/Social-Project/actions/workflows/tests.yml/badge.svg)
+
 # 🧩 EventHub — Social Event Platform
 
 **EventHub** is a full-stack web application for discovering, creating, and filtering events by hobbies and location.  
@@ -73,8 +75,7 @@ project/
 │ └── App.tsx
 └── package.json
 
-yaml
-Copy code
+```
 
 ---
 
