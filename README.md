@@ -85,7 +85,7 @@ cd server && npx jest --runInBand
 │   └── uploads          # User images (Avatars/Events)
 ├── 🖼️ screenshots       # UI previews
 └── 📄 package.json
-
+```
 ---
 
 ## 🖼️ UI & UX
