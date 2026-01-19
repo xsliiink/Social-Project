@@ -85,9 +85,6 @@ cd server && npx jest --runInBand
 ├── 🖼️ screenshots       # UI previews
 └── 📄 package.json
 
-yaml
-Copy code
-
 ---
 
 ## 🖼️ UI & UX
