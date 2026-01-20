@@ -69,6 +69,13 @@ cd server && npx jest --runInBand
 ```
 ---
 
+
+## 💎 Code Quality & Standards
+
+To maintain high professional standards, the project includes:
+- **ESLint & TypeScript** — Strict linting rules to ensure code consistency and prevent bugs.
+- **Zero `any` policy** — Full type safety across the entire application.
+- **Hook Optimization** — Advanced React patterns (`useCallback`, `useEffect`) to minimize re-renders and optimize performance.
 ## 🧠 Project Architecture
 
 ```text
@@ -108,8 +115,8 @@ cd server && npx jest --runInBand
 
 ```bash
 # 1. Install dependencies
-cd backend && npm install
-cd ../frontend && npm install
+cd server && npm install
+cd ../client && npm install
 
 # 2. Run backend and frontend
 cd server && npm start
