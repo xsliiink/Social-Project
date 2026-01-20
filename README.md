@@ -108,15 +108,15 @@ cd server && npx jest --runInBand
 
 ```bash
 # 1. Install dependencies
-cd backend && npm install
-cd ../frontend && npm install
+cd server && npm install
+cd ../client && npm install
 
 # 2. Run backend and frontend
 cd server && npm start
 cd ../client && npm run dev
 App will be available at:
 📍 Frontend → http://localhost:5173
-📍 Backend → http://localhost:5000
+📍 Backend → http://localhost:3007
 
 cd ../frontend && npm run dev
 App will be available at:
