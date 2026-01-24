@@ -129,7 +129,4 @@ App will be available at:
 📍 Frontend → http://localhost:5173
 📍 Backend → http://localhost:3007
 
-cd ../frontend && npm run dev
-App will be available at:
-📍 Frontend → http://localhost:5173
-📍 Backend → http://localhost:5000
+
