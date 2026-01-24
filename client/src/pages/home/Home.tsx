@@ -101,7 +101,7 @@ export default function Home(){
                 console.log(pair[0], pair[1]);
             }
 
-            const res = await fetch ('/api/events',{
+            const res = await fetch ('/api/events/create',{
                 method: 'POST',
                 headers:{
                     'Authorization' : `Bearer ${token}`

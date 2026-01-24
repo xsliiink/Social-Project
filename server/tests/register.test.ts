@@ -2,7 +2,7 @@ import request from 'supertest';
 import app from '../app';
 import path from 'path';
 import fs from 'fs';
-import { db } from '../app'; 
+import  db  from '../db'; 
 
 interface userRow{
     id: number;
@@ -25,7 +25,7 @@ describe('Auth API',() =>{
         }
 
         const response  = await request(app)
-            .post('/api/register')
+            .post('/api/auth/register')
 
             .field('username', username)
             .field('password','secret123')
