@@ -31,6 +31,12 @@ Users can create their own events, attach images, select hobbies, and browse off
 
 ---
 
+* **Modular Architecture:** Refactored the monolithic backend into a clear **Routes & Middlewares** structure.
+* **Type Safety:** Eliminated `any` types across the backend, implementing strict TypeScript interfaces and error handling.
+* **Code Quality (DX):** Integrated **ESLint** and **Prettier** for automated code linting and consistent formatting.
+* **Asynchronous Logic:** Optimized database operations and file uploads using `async/await` and robust error catching.
+* **API Improvements:** Restructured the event creation flow with better validation and file handling (Multer).
+
 ## 🗃️ Database Structure
 
 | Table | Description |
