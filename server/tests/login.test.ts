@@ -1,6 +1,6 @@
 import request from 'supertest';
 import app from '../app';
-import {db} from '../app';
+import db from '../db';
 
 interface userRow{
     id:number;
@@ -16,7 +16,7 @@ describe('/Login API', () => {
     //creating the user
     beforeAll(async () => {
         await request(app)
-            .post('/api/register')
+            .post('/api/auth/register')
             .field('username',testUser.username)
             .field('password',testUser.password)
             .field('bio', 'I exist for login tests')
@@ -37,7 +37,7 @@ describe('/Login API', () => {
         });
 
         const response = await request(app)
-        .post('/api/login')
+        .post('/api/auth/login')
         .send({
             username:  testUser.username,
             password: testUser.password
@@ -53,7 +53,7 @@ describe('/Login API', () => {
 
     it('should return 400 for non-existing user',async() =>{
         const response =  await request(app)
-        .post('/api/login')
+        .post('/api/auth/login')
         .send({
             username: 'I_dont_exists',
             password: 'some_password'

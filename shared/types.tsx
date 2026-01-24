@@ -32,3 +32,58 @@ export interface EventHobby{
     event_id : number;
     hobby_id : number;
 }
+
+export interface hobbyRow{
+    id: number;
+    name: string;
+}
+
+export interface EventBody{
+    name: string;
+    description: string;
+    location: string;
+    date: string;
+    'selectedHobbies[]'?: string | string[];
+}
+
+export interface EventsQuery{
+    location?: string;
+    hobby?: string;
+    official?: string;
+}
+
+export interface EventRow{
+    id: number;
+    name:string;
+    description: string;
+    date: string;
+    location: string;
+    image?: string;
+    creator_id: number;
+    official: number;
+    hobbies: string | null;
+}
+
+export interface RegisterBody{
+    username: string;
+    password: string;
+    bio: string;
+    hobbies: string;
+}
+
+export interface LoginBody{
+    username?: string;
+    password?: string;
+}
+
+export interface userRow{
+    id: number;
+    username: string;
+    password: string;
+    bio?: string;
+    avatar?: string;
+}
+
+export interface rawHobbies{
+    [key: string]: string | string[];
+}

@@ -11,7 +11,7 @@ describe('/Events API', () =>{
 
     beforeAll(async () => {
         await request(app)
-            .post('/api/register')
+            .post('/api/auth/register')
             .field('username',testUser.username)
             .field('password',testUser.password)
             .field('bio', 'I plan events')
@@ -19,7 +19,7 @@ describe('/Events API', () =>{
 
             //Login
             const loginRes = await request(app)
-                .post('/api/login')
+                .post('/api/auth/login')
                 .send({
                     username:testUser.username,
                     password: testUser.password
@@ -30,7 +30,7 @@ describe('/Events API', () =>{
 
     it('should fail to create event without token',async() =>{
         const res = await request(app)
-            .post('/api/events')
+            .post('/api/events/create')
             .send({name: 'Hackaton'});
 
         expect(res.status).toBe(401);
@@ -38,13 +38,13 @@ describe('/Events API', () =>{
 
     it('should create a new event with valid token', async() =>{
         const res = await request(app)
-            .post('/api/events')
+            .post('/api/events/create')
             .set('Authorization', `Bearer ${token}`)
             .field('name', 'Hackathon')
             .field('description', '24-hour coding event')
             .field('location', 'Online')
             .field('date', '2024-12-01')
-            .field('selectedHobbies', JSON.stringify(['Coding']))
+            .field('selectedHobbies', 'Coding')
             .attach('eventImage', Buffer.from([0x89,0x50,0x4E,0x47]), 'hackathon.png');
 
         expect(res.status).toBe(200);
